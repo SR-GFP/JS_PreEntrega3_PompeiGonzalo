@@ -1,0 +1,20 @@
+/*para hacer que el icono menu este en el medio en dispositivos pequeños */ 
+.navbar .container-fluid {
+    justify-content: center;
+}
+
+.col-form-label{
+    color: whitesmoke;
+}
+
+.btn-primary{
+    box-shadow:inset;
+}
+
+.bi-gear, .bi-people{
+    font-size: 3rem;
+    color: black;
+}
+.navbar-nav{
+    
+}
