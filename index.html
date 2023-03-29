@@ -31,7 +31,7 @@
                         <a class="nav-link" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" >Contacto</a>
+                        <a class="nav-link" href="#">Contacto</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -45,46 +45,49 @@
                             <li><a class="dropdown-item" href="#">Anime</a></li>
                         </ul>
                     </li>
-                </ul>                
+                </ul>
+                <div>
+                    <!-- boton para login -->
+                    <button id="btnLogin" class="btn-primary">Log In</button>
+                </div>        
             </div>
-        </div>
         </div>
     </nav>
-    <header class="header">
-        <div class="container">
-            <div class="row mt-5      ">
-                <div class="col-md-12 justify-content-center d-flex">
-                    <input type="text mb-5">
-                </div>
+    <header class="header"></header>
+    <!-- ventana emergente al hacer click en boton login -->
+    <div id="ventanaEmergente" class="ventana__emergente ">
+        <div class="ventana__contenedor"id="ventanaContenedor">
+            <!-- Boton para cerrar -->
+            <div>
+                <span class="boton__cerrar" id="btnCerrar">&times;</span>            
+            </div>
+            <!-- formulario para ingreso -->            
+            <div>
+                <form action="">
+                    <input type="text" class="input__usuario " name="usuario" value="" placeholder="Usuario" id="inputUsuario">
+                    <input type="password" value="" placeholder="Contraseña" name="input__password" id="inputPassword">
+                    <input type="submit" value="Ingresar" id="inputIngresar">
+                </form>            
             </div>
         </div>
+    </div>
+    
+
+
+
     </header>
 
     <main class="main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6  col-md-6 col-sm-6 d-flex justify-content-center mt-5">
-                    <a href="./admin.html">
-                        <button  type="button" class="btn-primary" id="botonAdministrador">                        
-                            <i class="bi bi-gear"></i>
-                            <p>Acceder como <br>Administrador</p>
-                        </button>
-                    </a>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center mt-5">
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center mt-5">                    
-                        <button type="button" class="btn-primary" id="botonUsuario">                        
-                            <i class="bi bi-people"></i>
-                            <p>Acceder como <br> Usuario</p>
-                        </button>
+                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center mt-5">
                 </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center mt-5">                    
-                    <button type="button" class="btn-primary" id="prueba">                        
-                        <i class="bi bi-people"></i>
-                        <p>Acceder como <br> Usuario</p>
-                    </button>
-            </div>
             </div>
         </div>
     </main>
