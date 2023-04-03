@@ -1,3 +1,74 @@
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.main {
+    height: 100%;
+}
+
+
+
+
+/*VENTANA EMERGENTE LOG IN */ 
+.ventana__emergente__bloqueada{
+    display: none;
+}
+.ventana__emergente__desbloqueada{
+    display: block;
+}
+
+.contenedor__mensaje{
+    text-align: center;
+    display: none;    
+    z-index: 2;
+    background-color: rgba(250, 235, 215, 0.381);
+    
+}
+.contenedor__form{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    float: left;
+}
+.btn-secondary{
+    float: right;
+}
+.Contenedor__botones__form{
+    justify-content: space-evenly;    
+}
+.bi-info-circle{
+    font-size: 2rem;
+}
+
+/* vista del contenedor Home */
+.contenedor__home{
+    background-color: aqua;
+    height: 100%;
+}
+/* vista del contenedor Administrador */
+.contenedor__administrador{
+    background-color: whitesmoke;
+    height: 100%;
+}
+.col-sm-3{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.columna__formulario{        
+    background-color: whitesmoke;
+}
+/* vista del contenedor Carrito */
+.contenedor__carrito{
+    background-color: red;
+    height: 100%;
+}
+
+
+
+
 /*para hacer que el icono menu este en el medio en dispositivos pequeños */ 
 .navbar .container-fluid {
     justify-content: center;
@@ -18,31 +89,4 @@
 
 .collapse, .navbar-collapse{
     justify-content: space-between;
-}
-
-
-.ventana__emergente{
-    display: none;
-}
-
-.ver{
-    display: block;
-}
-.ventana__contenedor{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-    background-color: black;
-    padding-bottom: 1rem;
-}   
-.boton__cerrar{
-    color: white;
-    font-size: 2rem;
-    float: right;
-    font-weight: bold;    
-}
-.boton__cerrar:hover{
-    cursor: pointer;
 }
