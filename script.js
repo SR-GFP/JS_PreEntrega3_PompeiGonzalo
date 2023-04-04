@@ -4,13 +4,14 @@ let carrito = [];
 
 //-- Clase constructora para productosEnStock--//
 class NuevoProducto {
-    constructor(id, nombre, modelo, color, talle, cantidadStock) {
+    constructor(id, nombre, modelo, color, talle, cantidadStock, rutaImg) {
             this.id = id;
-            this.nombre = nombre;
-            this.modelo = modelo;
-            this.color = color;
+            this.nombre = nombre.toUpperCase();
+            this.modelo = modelo.toUpperCase();
+            this.color = color.toUpperCase();
             this.talle = talle;
             this.cantidadStock = cantidadStock;
+            this.rutaImg = rutaImg;
     }
 }
 
@@ -41,6 +42,7 @@ const listaDeVariablesParaNodos = [
     inputCantidadStock,
     btnCargarProducto,
     btnCerrarForm,
+    inputArchivo,
 ]
 
 /*  Function abstracta para vinvulacion de nodos
@@ -117,14 +119,17 @@ function cerrarForm(event) {
 function verFormularioAgregarProducto(event) {
     vistaAgregarProducto.hidden = false;
 }
+
+// validar Formulario para nuevo Producto
 function validarFormularioAgregarProducto(event) {
     event.preventDefault();
     let idProducto = inputID.value;
     let nombreProducto = inputNombre.value;
     let colorProducto = inputColor.value;
-    let modeloProducto = inputModelo.valu;
+    let modeloProducto = inputModelo.value;
     let talleProducto = inputTalle.value;
     let cantidadStockProducto = inputCantidadStock.value;
+    let rutaArchivo = inputArchivo.value;
 
     // validar si el producto existe, si no cargarlo con clase
     const idExiste = productosEnStock.some((producto) => producto.id === idProducto);
@@ -136,14 +141,42 @@ function validarFormularioAgregarProducto(event) {
             modeloProducto,
             talleProducto,
             cantidadStockProducto,
+            rutaArchivo,
         );
         productosEnStock.push(producto)
+        console.log(productosEnStock)
         formularioAgregarProducto.reset();
         Swal.fire("Se agrego el producto correctamente")
+        pintarNuevoProducto();
+    }else{
+        Swal.fire("El ID de producto ya existe!")
     }
 }
-console.log(productosEnStock)
-
+function pintarNuevoProducto(){
+    contenedorNuevoProducto.innerHTML = "";
+    let column = document.createElement("div");
+    column.className= "col-md-12";
+    column.id=`columna-${inputID.value}`;
+    column.innerHTML=`
+    <div class="card mb-3 ml-1" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="${rutaArchivo.value}"
+                alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <p class="card-text">ID: ${inputID.value} </p>
+                <p class="card-text">Color: ${inputColor.value} </p>
+                <p class="card-text">Nombre: ${inputNombre.value}</p>
+                <p class="card-text">Modelo: ${inputModelo.value}</p>
+                <p class="card-text">Talle: ${inputTalle.value}</p>
+                <p class="card-text">Cantidad: ${inputCantidadStock.value}</p>
+            </div>
+        </div>
+    </div>
+    `
+}
 
 function main() {
     cargarDatosAdministradorStorage();

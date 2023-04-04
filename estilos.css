@@ -67,8 +67,6 @@ body, html{
 }
 
 
-
-
 /*para hacer que el icono menu este en el medio en dispositivos pequeños */ 
 .navbar .container-fluid {
     justify-content: center;

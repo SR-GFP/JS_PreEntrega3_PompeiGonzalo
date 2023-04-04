@@ -112,8 +112,8 @@
         </div>
 
         <!-- vista del Administrador -->
-        <div class="container-fluid contenedor__administrador" id="contenedorAdministrador" hidden >
-            <div class="container">
+        <div class="container-fluid d-inline-block contenedor__administrador" id="contenedorAdministrador" hidden>
+            <div class="container contenedor__botones__admin">
                 <div class="row">
                     <div class="col-sm-3">
                         <button class="btn btn-primary" id="btnAgregarProductoStock">Agregar Producto a Stock</button>
@@ -131,6 +131,7 @@
             </div>
             <!-- Vista para Agregar Productos al Stock mediante Formulario -->
             <div class="row mt-5" id="vistaAgregarProducto" hidden>
+                <!-- Formulario para Agregar Producto -->
                 <div class="col-sm-6 columna__formulario">
                     <form class="" id="formularioAgregarProducto">
                         <div class="mb-3">
@@ -163,22 +164,46 @@
                             <label for="inputCantidad" class="form-label">Cantidad</label>
                             <input type="number" class="form-control" id="inputCantidadStock">
                         </div>
-                        <button type="submit" class="btn btn-primary" id="btnCargarProducto">Carga Producto</button>
-                        <button type="button" class="btn btn-secondary" id="btnCerrarForm">Cancelar</button>
+                        <div class="mb-2">
+                            <label for="inputArchivo">Agrega Imagen</label>
+                            <input type="file" name="Agregar Imagen" id="inputArchivo">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" id="btnCargarProducto">Carga Producto</button>
+                            <button type="button" class="btn btn-secondary" id="btnCerrarForm">Cancelar</button>
+                        </div>
                     </form>
                 </div>
+                <!-- Card del nuevo producto agregado -->
                 <div class="col-sm-6 text-center">
                     <div>
                         <p>Nuevos Productos agregados al Stock</p>
                     </div>
-                    <div>
-
+                    <div id="contenedorNuevoProducto" class="row">
+                        <div class="col-md-12" id="columnaNuevoProducto">
+                            <div class="card mb-3 ml-1" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./img/imagen_bladeRunner.jfif" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-text">ID: </p>
+                                            <p class="card-text">Color: </p>
+                                            <p class="card-text">Nombre: </p>
+                                            <p class="card-text">Modelo: </p>
+                                            <p class="card-text">Talle: </p>
+                                            <p class="card-text">Cantidad: </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
         <!-- vista del Carrito de Compras -->
         <div class="contenedor__carrito" id="contenedorCarrito" hidden>
 
