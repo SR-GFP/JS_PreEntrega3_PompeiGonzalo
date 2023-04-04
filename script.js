@@ -151,7 +151,9 @@ function validarFormularioAgregarProducto(event) {
     }else{
         Swal.fire("El ID de producto ya existe!")
     }
+    console.log(rutaArchivo, inputArchivo.value);
 }
+
 function pintarNuevoProducto(){
     contenedorNuevoProducto.innerHTML = "";
     let column = document.createElement("div");
@@ -161,7 +163,7 @@ function pintarNuevoProducto(){
     <div class="card mb-3 ml-1" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src="${rutaArchivo.value}"
+            <img src="${inputArchivo.value}"
                 alt="...">
         </div>
         <div class="col-md-8">
@@ -175,7 +177,8 @@ function pintarNuevoProducto(){
             </div>
         </div>
     </div>
-    `
+    `;
+    contenedorNuevoProducto.append(column);
 }
 
 function main() {

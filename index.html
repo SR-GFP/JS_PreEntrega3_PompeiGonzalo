@@ -112,7 +112,7 @@
         </div>
 
         <!-- vista del Administrador -->
-        <div class="container-fluid d-inline-block contenedor__administrador" id="contenedorAdministrador" hidden>
+        <div class="container-fluid contenedor__administrador" id="contenedorAdministrador" hidden>
             <div class="container contenedor__botones__admin">
                 <div class="row">
                     <div class="col-sm-3">
@@ -136,24 +136,24 @@
                     <form class="" id="formularioAgregarProducto">
                         <div class="mb-3">
                             <label for="inputID" class="form-label">ID</label>
-                            <input type="text" class="form-control" id="inputID">
+                            <input type="text" class="form-control" id="inputID" required>
                         </div>
                         <div class="mb-3">
                             <label for="inputColor" class="form-label">Color</label>
-                            <input type="text" class="form-control" id="inputColor">
+                            <input type="text" class="form-control" id="inputColor" required>
                         </div>
                         <div class="mb-3">
                             <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputNombre">
+                            <input type="text" class="form-control" id="inputNombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="inputModelo" class="form-label">Modelo</label>
-                            <input type="text" class="form-control" id="inputModelo">
+                            <input type="text" class="form-control" id="inputModelo" required>
                         </div>
                         <div class="mb-3">
-                            <label for="inputTalle" class="form-label">Talle</label>
-                            <select class="form-select" id="inputTalle">
-                                <option selected>Seleccione una opción</option>
+                            <label for="inputTalle" class="form-label" required>Talle</label>
+                            <select class="form-select" id="inputTalle" required>
+                                <option selected>Seleccione una opción</option required>
                                 <option value="S">S</option>
                                 <option value="M">M</option>
                                 <option value="L">L</option>
@@ -162,11 +162,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="inputCantidad" class="form-label">Cantidad</label>
-                            <input type="number" class="form-control" id="inputCantidadStock">
+                            <input type="number" class="form-control" id="inputCantidadStock" required>
                         </div>
                         <div class="mb-2">
                             <label for="inputArchivo">Agrega Imagen</label>
-                            <input type="file" name="Agregar Imagen" id="inputArchivo">
+                            <input type="file" name="Agregar Imagen" id="inputArchivo" accept="./img">
                         </div>
                         <div>
                             <button type="submit" class="btn btn-primary" id="btnCargarProducto">Carga Producto</button>
@@ -180,26 +180,6 @@
                         <p>Nuevos Productos agregados al Stock</p>
                     </div>
                     <div id="contenedorNuevoProducto" class="row">
-                        <div class="col-md-12" id="columnaNuevoProducto">
-                            <div class="card mb-3 ml-1" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="./img/imagen_bladeRunner.jfif" class="img-fluid rounded-start"
-                                            alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <p class="card-text">ID: </p>
-                                            <p class="card-text">Color: </p>
-                                            <p class="card-text">Nombre: </p>
-                                            <p class="card-text">Modelo: </p>
-                                            <p class="card-text">Talle: </p>
-                                            <p class="card-text">Cantidad: </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
