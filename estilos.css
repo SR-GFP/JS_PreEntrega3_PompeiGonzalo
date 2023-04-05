@@ -49,8 +49,8 @@ body, html{
 }
 /* vista del contenedor Administrador */
 .contenedor__administrador{
-    background-color: whitesmoke;
-    height: 100%;
+    background-color: whitesmoke;    
+    padding: 1rem;
 }
 .col-sm-3{
     display: flex;
